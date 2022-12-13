@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "streamlit_whisper_gpt"
+version = "0.1.0"
+description = ""
+authors = ["Ernesto Crespo <ecrespo@protonmail.com>"]
+readme = "README.md"
+packages = [{include = "pruebas_streamlit"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+streamlit = "^1.15.0"
+pandas = "^1.5.1"
+streamlit-audiorecorder = "^0.0.2"
+streamlit-player = "^0.1.5"
+audio-recorder-streamlit = "^0.0.4"
+whisper = {git = "https://github.com/openai/whisper.git"}
+torch = "^1.13.0"
+  = "^1.5.2"
+tqdm = "^4.64.1"
+transformers = {extras = ["torch"], version = "^4.25.1"}
+huggingface = "^0.0.1"
+ffmpeg-python = "^0.2.0"
+torchvision = "^0.14.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
