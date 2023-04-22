@@ -10,9 +10,6 @@ st.title('Pruebas de captura de voz usando audio recorder y transcripción usand
 
 st.write("""Haga una grabación""")
 
-# Load the Whisper model
-model = whisper.Transcriber(model_path='base')
-
 # Record audio
 audio_bytes = audio_recorder()
 
@@ -24,7 +21,7 @@ if audio_bytes:
     # Transcribe audio
     with open('audio.mp3', 'rb') as f:
         audio_bytes = io.BytesIO(f.read())
-    result = model.transcribe(audio_bytes, language='Spanish')
+    result = whisper.transcribe(audio_bytes, model_path='base', language='es-MX')
 
     # Display audio and transcription
     st.audio(audio_bytes, format='audio/wav')
