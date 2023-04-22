@@ -8,3 +8,4 @@ audio_recorder_streamlit
 whisper
 openai
 torch
+sounddevice
