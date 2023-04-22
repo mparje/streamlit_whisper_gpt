@@ -4,3 +4,4 @@ scikit-learn==1.1.1
 streamlit==1.1.0
 streamlit.audiorecorder
 streamlit_player
+audio_recorder_streamlit
